@@ -1,6 +1,9 @@
 <template>
   <div>
-    <TextField />
+    <TextField
+      v-model="text"
+      class="text-field"
+    />
   </div>
 </template>
 
@@ -11,9 +14,19 @@ export default {
   name: 'App',
   components: {
     TextField,
-  }
+  },
+  data() {
+    return {
+      text: '',
+    }
+  },
 }
 </script>
 
 <style>
+.text-field {
+  width: 100%;
+  max-width: 326px;
+  margin: auto;
+}
 </style>
